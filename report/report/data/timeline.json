@@ -1,65 +1,65 @@
 {
   "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
   "children" : [ {
     "name" : "MacdeMacBook-Pro.local",
     "children" : [ {
-      "name" : "1782-MainThread",
+      "name" : "2163-MainThread",
       "children" : [ {
         "name" : "测试数据",
-        "uid" : "827bd25d56cb6f3b",
-        "parentUid" : "940a3070dffc8eed1a9bdf34d27451c5",
+        "uid" : "99edce348546011a",
+        "parentUid" : "1bd5b2029c6a459ec88103c874d3a96e",
         "status" : "passed",
         "time" : {
-          "start" : 1635768460559,
-          "stop" : 1635768465963,
-          "duration" : 5404
+          "start" : 1635769207240,
+          "stop" : 1635769222251,
+          "duration" : 15011
         },
         "flaky" : false,
         "newFailed" : false,
-        "parameters" : [ "['mik', 'abc123456', '密码错误']" ]
+        "parameters" : [ ]
       }, {
         "name" : "测试数据",
-        "uid" : "ec68ecfbbf7eeb2d",
-        "parentUid" : "940a3070dffc8eed1a9bdf34d27451c5",
+        "uid" : "9720dee6aea98001",
+        "parentUid" : "1bd5b2029c6a459ec88103c874d3a96e",
         "status" : "passed",
         "time" : {
-          "start" : 1635768451613,
-          "stop" : 1635768455064,
-          "duration" : 3451
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ "['mik', 123456, '登录成功']" ]
-      }, {
-        "name" : "测试数据",
-        "uid" : "ddbc246e293ac686",
-        "parentUid" : "940a3070dffc8eed1a9bdf34d27451c5",
-        "status" : "passed",
-        "time" : {
-          "start" : 1635768471392,
-          "stop" : 1635768474791,
-          "duration" : 3399
+          "start" : 1635769198713,
+          "stop" : 1635769201733,
+          "duration" : 3020
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ "['mik2232', 123456, '登录帐号不存在']" ]
       }, {
         "name" : "测试数据",
-        "uid" : "35933001b0de4cf8",
-        "parentUid" : "940a3070dffc8eed1a9bdf34d27451c5",
+        "uid" : "8e49afe1f399e981",
+        "parentUid" : "1bd5b2029c6a459ec88103c874d3a96e",
         "status" : "passed",
         "time" : {
-          "start" : 1635768480273,
-          "stop" : 1635768494362,
-          "duration" : 14089
+          "start" : 1635769189780,
+          "stop" : 1635769193054,
+          "duration" : 3274
         },
         "flaky" : false,
         "newFailed" : false,
-        "parameters" : [ ]
+        "parameters" : [ "['mik', 'abc123456', '密码错误']" ]
+      }, {
+        "name" : "测试数据",
+        "uid" : "502a57497e5edbce",
+        "parentUid" : "1bd5b2029c6a459ec88103c874d3a96e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1635769180757,
+          "stop" : 1635769184052,
+          "duration" : 3295
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "['mik', 123456, '登录成功']" ]
       } ],
-      "uid" : "940a3070dffc8eed1a9bdf34d27451c5"
+      "uid" : "1bd5b2029c6a459ec88103c874d3a96e"
     } ],
     "uid" : "be6872f31163783ce262aaf3fa7352ed"
-  } ],
-  "name" : "timeline"
+  } ]
 }

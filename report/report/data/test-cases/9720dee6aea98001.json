@@ -1,12 +1,12 @@
 {
-  "uid" : "ddbc246e293ac686",
+  "uid" : "9720dee6aea98001",
   "name" : "测试数据",
   "fullName" : "testcases.test01_login.TestLogin#test01_login",
   "historyId" : "2588af7e89479070b4a6952957b04c43",
   "time" : {
-    "start" : 1635768471392,
-    "stop" : 1635768474791,
-    "duration" : 3399
+    "start" : 1635769198713,
+    "stop" : 1635769201733,
+    "duration" : 3020
   },
   "status" : "passed",
   "flaky" : false,
@@ -14,9 +14,9 @@
   "beforeStages" : [ {
     "name" : "_session_faker",
     "time" : {
-      "start" : 1635768448806,
-      "stop" : 1635768448917,
-      "duration" : 111
+      "start" : 1635769177633,
+      "stop" : 1635769177701,
+      "duration" : 68
     },
     "status" : "passed",
     "steps" : [ ],
@@ -29,8 +29,8 @@
   }, {
     "name" : "test_cases_log",
     "time" : {
-      "start" : 1635768469086,
-      "stop" : 1635768469086,
+      "start" : 1635769196225,
+      "stop" : 1635769196225,
       "duration" : 0
     },
     "status" : "passed",
@@ -44,9 +44,9 @@
   }, {
     "name" : "driver",
     "time" : {
-      "start" : 1635768469086,
-      "stop" : 1635768471390,
-      "duration" : 2304
+      "start" : 1635769196225,
+      "stop" : 1635769198712,
+      "duration" : 2487
     },
     "status" : "passed",
     "steps" : [ ],
@@ -61,11 +61,11 @@
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ {
-      "uid" : "4723e9008f1ed089",
+      "uid" : "d3b36b185531d404",
       "name" : "log",
-      "source" : "4723e9008f1ed089.txt",
+      "source" : "d3b36b185531d404.txt",
       "type" : "text/plain",
-      "size" : 1649
+      "size" : 1650
     } ],
     "parameters" : [ ],
     "stepsCount" : 0,
@@ -76,8 +76,8 @@
   "afterStages" : [ {
     "name" : "test_cases_log::0",
     "time" : {
-      "start" : 1635768477895,
-      "stop" : 1635768477896,
+      "start" : 1635769204816,
+      "stop" : 1635769204817,
       "duration" : 1
     },
     "status" : "passed",
@@ -91,9 +91,9 @@
   }, {
     "name" : "driver::0",
     "time" : {
-      "start" : 1635768477793,
-      "stop" : 1635768477894,
-      "duration" : 101
+      "start" : 1635769204735,
+      "stop" : 1635769204814,
+      "duration" : 79
     },
     "status" : "passed",
     "steps" : [ ],
@@ -108,14 +108,14 @@
     "name" : "story",
     "value" : "用户登陆"
   }, {
+    "name" : "feature",
+    "value" : "用户登录模块"
+  }, {
     "name" : "epic",
     "value" : "Web测试"
   }, {
     "name" : "severity",
     "value" : "blocker"
-  }, {
-    "name" : "feature",
-    "value" : "用户登录模块"
   }, {
     "name" : "parentSuite",
     "value" : "testcases"
@@ -130,7 +130,7 @@
     "value" : "MacdeMacBook-Pro.local"
   }, {
     "name" : "thread",
-    "value" : "1782-MainThread"
+    "value" : "2163-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -157,6 +157,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "ddbc246e293ac686.json",
+  "source" : "9720dee6aea98001.json",
   "parameterValues" : [ "['mik2232', 123456, '登录帐号不存在']" ]
 }

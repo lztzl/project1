@@ -1,5 +1,6 @@
 {
   "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
   "children" : [ {
     "name" : "testcases",
     "children" : [ {
@@ -8,39 +9,39 @@
         "name" : "TestLogin",
         "children" : [ {
           "name" : "测试数据",
-          "uid" : "ec68ecfbbf7eeb2d",
+          "uid" : "502a57497e5edbce",
           "parentUid" : "e704cc89e69a0de85cc9572e5e4b209b",
           "status" : "passed",
           "time" : {
-            "start" : 1635768451613,
-            "stop" : 1635768455064,
-            "duration" : 3451
+            "start" : 1635769180757,
+            "stop" : 1635769184052,
+            "duration" : 3295
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "['mik', 123456, '登录成功']" ]
         }, {
           "name" : "测试数据",
-          "uid" : "827bd25d56cb6f3b",
+          "uid" : "8e49afe1f399e981",
           "parentUid" : "e704cc89e69a0de85cc9572e5e4b209b",
           "status" : "passed",
           "time" : {
-            "start" : 1635768460559,
-            "stop" : 1635768465963,
-            "duration" : 5404
+            "start" : 1635769189780,
+            "stop" : 1635769193054,
+            "duration" : 3274
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "['mik', 'abc123456', '密码错误']" ]
         }, {
           "name" : "测试数据",
-          "uid" : "ddbc246e293ac686",
+          "uid" : "9720dee6aea98001",
           "parentUid" : "e704cc89e69a0de85cc9572e5e4b209b",
           "status" : "passed",
           "time" : {
-            "start" : 1635768471392,
-            "stop" : 1635768474791,
-            "duration" : 3399
+            "start" : 1635769198713,
+            "stop" : 1635769201733,
+            "duration" : 3020
           },
           "flaky" : false,
           "newFailed" : false,
@@ -55,13 +56,13 @@
         "name" : "TestAddress",
         "children" : [ {
           "name" : "测试数据",
-          "uid" : "35933001b0de4cf8",
+          "uid" : "99edce348546011a",
           "parentUid" : "5e55fc098533decebf052e77b9778560",
           "status" : "passed",
           "time" : {
-            "start" : 1635768480273,
-            "stop" : 1635768494362,
-            "duration" : 14089
+            "start" : 1635769207240,
+            "stop" : 1635769222251,
+            "duration" : 15011
           },
           "flaky" : false,
           "newFailed" : false,
@@ -72,6 +73,5 @@
       "uid" : "53102b3e13d8d986f4ec3cd9ff0561f7"
     } ],
     "uid" : "b51346658ccdb9db01a6b5f6c12deab1"
-  } ],
-  "name" : "suites"
+  } ]
 }

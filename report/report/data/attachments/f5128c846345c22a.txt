@@ -1,39 +1,39 @@
 [32mINFO    [0m root:conftest.py:63 *************** 开始执行用例：test01_add_address ***************
 [32mINFO    [0m root:browser.py:107 打开chrome浏览器
-[32mINFO    [0m root:file_reader.py:43 加载文件:/Users/mac/Desktop/my_code/WebFramework/data/user_address_info_data.yaml
+[32mINFO    [0m root:reader.py:43 加载文件:/Users/mac/Desktop/my_code/WebFramework/data/user_address_info_data.yaml
 [32mINFO    [0m root:basepage.py:49 导航到:https://maitenghuicai.com/login.html
 [32mINFO    [0m root:basepage.py:64 定位元素：('xpath', '//input[@name="accounts"]'), 元素描述：LoginPageRsrc.LOC_用户名框
-[32mINFO    [0m root:basepage.py:73 元素定位成功:耗时0.034秒!
+[32mINFO    [0m root:basepage.py:73 元素定位成功:耗时0.04秒!
 [32mINFO    [0m root:basepage.py:234 输入内容:"mik", 元素描述:LoginPageRsrc.LOC_用户名框
 [32mINFO    [0m root:basepage.py:64 定位元素：('xpath', '//input[@name="pwd"]'), 元素描述：LoginPageRsrc.LOC_密码框
-[32mINFO    [0m root:basepage.py:73 元素定位成功:耗时0.038秒!
+[32mINFO    [0m root:basepage.py:73 元素定位成功:耗时0.039秒!
 [32mINFO    [0m root:basepage.py:234 输入内容:"123456", 元素描述:LoginPageRsrc.LOC_密码框
 [32mINFO    [0m root:basepage.py:64 定位元素：('xpath', '//input[@name="accounts"]'), 元素描述：LoginPageRsrc.LOC_用户名框
-[32mINFO    [0m root:basepage.py:73 元素定位成功:耗时0.027秒!
+[32mINFO    [0m root:basepage.py:73 元素定位成功:耗时0.032秒!
 [32mINFO    [0m root:basepage.py:283 提交form表单
 [32mINFO    [0m root:basepage.py:64 定位元素：('xpath', '//p[@class="prompt-msg"]'), 元素描述：LoginPageRsrc.LOC_登陆结果
-[32mINFO    [0m root:basepage.py:73 元素定位成功:耗时0.557秒!
+[32mINFO    [0m root:basepage.py:73 元素定位成功:耗时0.549秒!
 [32mINFO    [0m root:basepage.py:299 获取文本:"登录成功", 元素描述：LoginPageRsrc.LOC_登陆结果
 [32mINFO    [0m root:basepage.py:49 导航到:https://maitenghuicai.com/useraddress/index.html
 [32mINFO    [0m root:basepage.py:64 定位元素：('xpath', '//*[@data-popup-title="新增地址"]'), 元素描述：UserAddressPageRsrc.LOC_新增地址按钮
-[32mINFO    [0m root:basepage.py:73 元素定位成功:耗时0.029秒!
+[32mINFO    [0m root:basepage.py:73 元素定位成功:耗时0.028秒!
 [32mINFO    [0m root:basepage.py:252 点击元素:('xpath', '//*[@data-popup-title="新增地址"]'), 元素描述:UserAddressPageRsrc.LOC_新增地址按钮
 [32mINFO    [0m root:basepage.py:184 frame切换成功
 [32mINFO    [0m root:basepage.py:64 定位元素：('xpath', '//input[@placeholder="别名"]'), 元素描述：UserAddressPageRsrc.LOC_别名框
-[32mINFO    [0m root:basepage.py:73 元素定位成功:耗时0.02秒!
+[32mINFO    [0m root:basepage.py:73 元素定位成功:耗时0.05秒!
 [32mINFO    [0m root:basepage.py:234 输入内容:"小三", 元素描述:UserAddressPageRsrc.LOC_别名框
 [32mINFO    [0m root:basepage.py:64 定位元素：('xpath', '//input[@placeholder="姓名"]'), 元素描述：UserAddressPageRsrc.LOC_姓名框
-[32mINFO    [0m root:basepage.py:73 元素定位成功:耗时0.028秒!
+[32mINFO    [0m root:basepage.py:73 元素定位成功:耗时0.029秒!
 [32mINFO    [0m root:basepage.py:234 输入内容:"mik", 元素描述:UserAddressPageRsrc.LOC_姓名框
 [32mINFO    [0m root:basepage.py:64 定位元素：('xpath', '//input[@placeholder="电话"]'), 元素描述：UserAddressPageRsrc.LOC_电话框
-[32mINFO    [0m root:basepage.py:73 元素定位成功:耗时0.029秒!
+[32mINFO    [0m root:basepage.py:73 元素定位成功:耗时0.049秒!
 [32mINFO    [0m root:basepage.py:234 输入内容:"17534568778", 元素描述:UserAddressPageRsrc.LOC_电话框
 [32mINFO    [0m root:basepage.py:64 定位元素：('xpath', '//input[@placeholder="详细地址"]'), 元素描述：UserAddressPageRsrc.LOC_详细地址框
 [32mINFO    [0m root:basepage.py:73 元素定位成功:耗时0.03秒!
 [32mINFO    [0m root:basepage.py:234 输入内容:"湖北省武汉市", 元素描述:UserAddressPageRsrc.LOC_详细地址框
 [32mINFO    [0m root:basepage.py:39 强制等待1s
 [32mINFO    [0m root:basepage.py:64 定位元素：('xpath', '//span[text()="省份"]'), 元素描述：UserAddressPageRsrc.LOC_省下拉按钮
-[32mINFO    [0m root:basepage.py:73 元素定位成功:耗时0.029秒!
+[32mINFO    [0m root:basepage.py:73 元素定位成功:耗时0.028秒!
 [32mINFO    [0m root:basepage.py:252 点击元素:('xpath', '//span[text()="省份"]'), 元素描述:UserAddressPageRsrc.LOC_省下拉按钮
 [32mINFO    [0m root:basepage.py:39 强制等待1s
 [32mINFO    [0m root:basepage.py:64 定位元素：('xpath', '//li[text()="湖北省"]'), 元素描述：UserAddressPageRsrc.LOC_选择省
@@ -41,33 +41,33 @@
 [32mINFO    [0m root:basepage.py:252 点击元素:('xpath', '//li[text()="湖北省"]'), 元素描述:UserAddressPageRsrc.LOC_选择省
 [32mINFO    [0m root:basepage.py:39 强制等待1s
 [32mINFO    [0m root:basepage.py:64 定位元素：('xpath', '//span[text()="城市"]'), 元素描述：UserAddressPageRsrc.LOC_市下拉框按钮
-[32mINFO    [0m root:basepage.py:73 元素定位成功:耗时0.02秒!
+[32mINFO    [0m root:basepage.py:73 元素定位成功:耗时0.207秒!
 [32mINFO    [0m root:basepage.py:252 点击元素:('xpath', '//span[text()="城市"]'), 元素描述:UserAddressPageRsrc.LOC_市下拉框按钮
 [32mINFO    [0m root:basepage.py:39 强制等待1s
 [32mINFO    [0m root:basepage.py:64 定位元素：('xpath', '//li[text()="武汉市"]'), 元素描述：UserAddressPageRsrc.LOC_选择市
-[32mINFO    [0m root:basepage.py:73 元素定位成功:耗时0.024秒!
+[32mINFO    [0m root:basepage.py:73 元素定位成功:耗时0.021秒!
 [32mINFO    [0m root:basepage.py:252 点击元素:('xpath', '//li[text()="武汉市"]'), 元素描述:UserAddressPageRsrc.LOC_选择市
 [32mINFO    [0m root:basepage.py:39 强制等待1s
 [32mINFO    [0m root:basepage.py:64 定位元素：('xpath', '//span[text()="区/县"]'), 元素描述：UserAddressPageRsrc.LOC_区下拉框按钮
-[32mINFO    [0m root:basepage.py:73 元素定位成功:耗时0.023秒!
+[32mINFO    [0m root:basepage.py:73 元素定位成功:耗时0.02秒!
 [32mINFO    [0m root:basepage.py:252 点击元素:('xpath', '//span[text()="区/县"]'), 元素描述:UserAddressPageRsrc.LOC_区下拉框按钮
 [32mINFO    [0m root:basepage.py:39 强制等待1s
 [32mINFO    [0m root:basepage.py:64 定位元素：('xpath', '//li[text()="江夏区"]'), 元素描述：UserAddressPageRsrc.LOC_选择区
-[32mINFO    [0m root:basepage.py:73 元素定位成功:耗时0.022秒!
+[32mINFO    [0m root:basepage.py:73 元素定位成功:耗时0.02秒!
 [32mINFO    [0m root:basepage.py:252 点击元素:('xpath', '//li[text()="江夏区"]'), 元素描述:UserAddressPageRsrc.LOC_选择区
 [32mINFO    [0m root:basepage.py:64 定位元素：('xpath', '//*[text()="保存"]'), 元素描述：UserAddressPageRsrc.LOC_保存按钮
-[32mINFO    [0m root:basepage.py:73 元素定位成功:耗时0.022秒!
+[32mINFO    [0m root:basepage.py:73 元素定位成功:耗时0.019秒!
 [32mINFO    [0m root:basepage.py:437 滚动到元素：('xpath', '//*[text()="保存"]') ,元素描述：UserAddressPageRsrc.LOC_保存按钮
 [32mINFO    [0m root:basepage.py:39 强制等待1s
 [32mINFO    [0m root:basepage.py:64 定位元素：('xpath', '//*[text()="保存"]'), 元素描述：UserAddressPageRsrc.LOC_保存按钮
-[32mINFO    [0m root:basepage.py:73 元素定位成功:耗时0.015秒!
+[32mINFO    [0m root:basepage.py:73 元素定位成功:耗时0.017秒!
 [32mINFO    [0m root:basepage.py:252 点击元素:('xpath', '//*[text()="保存"]'), 元素描述:UserAddressPageRsrc.LOC_保存按钮
 [32mINFO    [0m root:basepage.py:39 强制等待0.5s
 [32mINFO    [0m root:basepage.py:64 定位元素：('xpath', '//p[@class="prompt-msg"]'), 元素描述：UserAddressPageRsrc.LOC_添加地址结果
-[32mINFO    [0m root:basepage.py:73 元素定位成功:耗时0.017秒!
+[32mINFO    [0m root:basepage.py:73 元素定位成功:耗时0.02秒!
 [32mINFO    [0m root:basepage.py:299 获取文本:"操作成功", 元素描述：UserAddressPageRsrc.LOC_添加地址结果
 [32mINFO    [0m root:basepage.py:64 定位元素：('xpath', '//p[@class="prompt-msg"]'), 元素描述：UserAddressPageRsrc.LOC_添加地址结果
-[32mINFO    [0m root:basepage.py:73 元素定位成功:耗时0.018秒!
-[32mINFO    [0m root:basepage.py:268 元素截图成功,图片路径为:/Users/mac/Desktop/my_code/WebFramework/imgs/2021-11-01-20-08-14.png
+[32mINFO    [0m root:basepage.py:73 元素定位成功:耗时0.013秒!
+[32mINFO    [0m root:basepage.py:268 元素截图成功,图片路径为:/Users/mac/Desktop/my_code/WebFramework/imgs/2021-11-01-20-20-21.png
 [32mINFO    [0m root:conftest.py:55 关闭浏览器,并重置driver
 [32mINFO    [0m root:conftest.py:65 *************** 结束执行用例：test01_add_address ***************
