@@ -58,7 +58,7 @@
     │  ├─clear.py          # 清理工具
     │  ├─logs.py          # 日志工具
     │  ├─mail.py          # 邮件工具
-    │  ├─http_client.py   # http请求工具
+    │  ├─http.py   # http请求工具
     │  └─*_*.py           # 其他各种工具
     ├─conftest.py         # 全局依赖初始化
     ├─pytest.ini	   # pytest启动配置文件

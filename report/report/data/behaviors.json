@@ -1,0 +1,77 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "children" : [ {
+    "name" : "Web测试",
+    "children" : [ {
+      "name" : "用户登录模块",
+      "children" : [ {
+        "name" : "用户登陆",
+        "children" : [ {
+          "name" : "测试数据",
+          "uid" : "ec68ecfbbf7eeb2d",
+          "parentUid" : "38fd4db858f34517f6457449093ba6fd",
+          "status" : "passed",
+          "time" : {
+            "start" : 1635768451613,
+            "stop" : 1635768455064,
+            "duration" : 3451
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "['mik', 123456, '登录成功']" ]
+        }, {
+          "name" : "测试数据",
+          "uid" : "827bd25d56cb6f3b",
+          "parentUid" : "38fd4db858f34517f6457449093ba6fd",
+          "status" : "passed",
+          "time" : {
+            "start" : 1635768460559,
+            "stop" : 1635768465963,
+            "duration" : 5404
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "['mik', 'abc123456', '密码错误']" ]
+        }, {
+          "name" : "测试数据",
+          "uid" : "ddbc246e293ac686",
+          "parentUid" : "38fd4db858f34517f6457449093ba6fd",
+          "status" : "passed",
+          "time" : {
+            "start" : 1635768471392,
+            "stop" : 1635768474791,
+            "duration" : 3399
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "['mik2232', 123456, '登录帐号不存在']" ]
+        } ],
+        "uid" : "38fd4db858f34517f6457449093ba6fd"
+      } ],
+      "uid" : "a1d8f7e1b56cc4a16474e2e4569864bb"
+    }, {
+      "name" : "修改地址模块",
+      "children" : [ {
+        "name" : "正常修改地址",
+        "children" : [ {
+          "name" : "测试数据",
+          "uid" : "35933001b0de4cf8",
+          "parentUid" : "fbdb7af4c39f2d32fa4b073d3a46e2b2",
+          "status" : "passed",
+          "time" : {
+            "start" : 1635768480273,
+            "stop" : 1635768494362,
+            "duration" : 14089
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "fbdb7af4c39f2d32fa4b073d3a46e2b2"
+      } ],
+      "uid" : "7d2450b2b8f4821ebd7e6d1c1bf1fcaf"
+    } ],
+    "uid" : "9c7bcc0067c4da9d0babe6b18b769798"
+  } ],
+  "name" : "behaviors"
+}

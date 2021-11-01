@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2020/7/11
 # @Author  : Mik
-from utils.file_reader import INIReader
+from utils.reader import INIReader
 from setting import DATABASE_INI_PATH
 from aiomysql import create_pool, DictCursor
 from cx_Oracle import SessionPool

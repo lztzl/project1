@@ -6,7 +6,7 @@
 from page.loginpage import LoginPage
 from page.user_address_page import UserAddressPage
 from setting import DATA_ROOT_PATH
-from utils.file_reader import YamlReader
+from utils.reader import YamlReader
 
 
 class ChangeUserAddress:

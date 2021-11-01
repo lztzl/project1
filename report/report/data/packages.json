@@ -1,0 +1,69 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "children" : [ {
+    "name" : "testcases",
+    "children" : [ {
+      "name" : "test01_login",
+      "children" : [ {
+        "name" : "测试数据",
+        "uid" : "ec68ecfbbf7eeb2d",
+        "parentUid" : "8d5a22ed8fd1efd3435df1f4baf6fa70",
+        "status" : "passed",
+        "time" : {
+          "start" : 1635768451613,
+          "stop" : 1635768455064,
+          "duration" : 3451
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "['mik', 123456, '登录成功']" ]
+      }, {
+        "name" : "测试数据",
+        "uid" : "827bd25d56cb6f3b",
+        "parentUid" : "8d5a22ed8fd1efd3435df1f4baf6fa70",
+        "status" : "passed",
+        "time" : {
+          "start" : 1635768460559,
+          "stop" : 1635768465963,
+          "duration" : 5404
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "['mik', 'abc123456', '密码错误']" ]
+      }, {
+        "name" : "测试数据",
+        "uid" : "ddbc246e293ac686",
+        "parentUid" : "8d5a22ed8fd1efd3435df1f4baf6fa70",
+        "status" : "passed",
+        "time" : {
+          "start" : 1635768471392,
+          "stop" : 1635768474791,
+          "duration" : 3399
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "['mik2232', 123456, '登录帐号不存在']" ]
+      } ],
+      "uid" : "8d5a22ed8fd1efd3435df1f4baf6fa70"
+    }, {
+      "name" : "test02_change_user_address",
+      "children" : [ {
+        "name" : "测试数据",
+        "uid" : "35933001b0de4cf8",
+        "parentUid" : "cc64f21c4c0d2d5901cc601bb161ffd5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1635768480273,
+          "stop" : 1635768494362,
+          "duration" : 14089
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "cc64f21c4c0d2d5901cc601bb161ffd5"
+    } ],
+    "uid" : "141fa05f02bf329144b0086cf92149a8"
+  } ],
+  "name" : "packages"
+}

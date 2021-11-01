@@ -8,7 +8,7 @@ import pytest
 from utils.logs import logs
 from pom.common_login import CommonLogin
 from setting import DATA_ROOT_PATH
-from utils.file_reader import YamlReader
+from utils.reader import YamlReader
 import time
 
 

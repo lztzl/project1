@@ -6,7 +6,7 @@
 import allure
 
 from setting import DATA_ROOT_PATH
-from utils.file_reader import YamlReader
+from utils.reader import YamlReader
 from utils.logs import logs
 from pom.change_user_address import ChangeUserAddress
 import time
