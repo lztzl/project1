@@ -91,7 +91,8 @@ class CHROME(Browser):
         """
         chrome_option = self._option()  # 获取chrome_option实例
         chrome_option.headless = self.HEADLESS
-        chrome_option.add_argument('--disable-gpu')  # 禁bug
+        chrome_option.add_argument('--disable-gpu')  # 禁bug，谷歌推荐参数
+        chrome_option.add_argument('--ignore-certificate-errors')  # 禁用ssl证书
         chrome_option.add_experimental_option("prefs", self.PREFS)
         if self.EXPERIMENTAL:
             for k, v in self.EXPERIMENTAL.items():
