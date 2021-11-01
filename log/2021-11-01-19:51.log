@@ -1,0 +1,328 @@
+[2021-11-01 19:51:06] [INFO] [conftest.py line:19]->>开始清理截图和日志文件...
+[2021-11-01 19:51:06] [INFO] [clear.py line:27]->>清除截图完成
+[2021-11-01 19:51:06] [INFO] [clear.py line:42]->>开始清理log
+[2021-11-01 19:51:06] [INFO] [clear.py line:52]->>log清理完成
+[2021-11-01 19:51:06] [INFO] [reader.py line:43]->>加载文件:/Users/mac/Desktop/my_code/WebFramework/data/login_data.yaml
+[2021-11-01 19:51:06] [INFO] [conftest.py line:27]->>*************** 开始执行用例：test01_login ***************
+[2021-11-01 19:51:06] [INFO] [browser.py line:107]->>打开chrome浏览器
+[2021-11-01 19:51:09] [INFO] [basepage.py line:49]->>导航到:https://maitenghuicai.com/login.html
+[2021-11-01 19:51:11] [INFO] [basepage.py line:64]->>定位元素：('xpath', '//input[@name="accounts"]'), 元素描述：LoginPageRsrc.LOC_用户名框
+[2021-11-01 19:51:11] [ERROR] [basepage.py line:69]->>元素定位失败,开始截图!
+[2021-11-01 19:51:11] [ERROR] [basepage.py line:203]->>截屏失败
+[2021-11-01 19:51:11] [ERROR] [logs.py line:59]->>test01_login(*args: tuple = (<testcases.test01_login.TestLogin object at 0x7fec0128a410>,), **kwargs: dict = {'driver': <selenium.webdriver.chrome.webdriver.WebDriver (session="f7b802f9cb6b3b29dec2a3ea6c36a369")>, 'arg': ['mik', 123456, '登录成功']})
+Traceback (most recent call last):
+  File "/Users/mac/Desktop/my_code/WebFramework/common/basepage.py", line 66, in find_element
+    ele = WebDriverWait(self.driver, self._timeout).until(EC.visibility_of_element_located(locator.value))
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/support/wait.py", line 71, in until
+    value = method(self._driver)
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/support/expected_conditions.py", line 128, in __call__
+    return _element_if_visible(_find_element(driver, self.locator))
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/support/expected_conditions.py", line 415, in _find_element
+    raise e
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/support/expected_conditions.py", line 411, in _find_element
+    return driver.find_element(*by)
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=95.0.4638.69)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mac/Desktop/my_code/WebFramework/utils/logs.py", line 50, in wrap_func
+    func(*args, **kwargs)
+  File "/Users/mac/Desktop/my_code/WebFramework/testcases/test01_login.py", line 34, in test01_login
+    res = page.login_result(arg[0], arg[1])
+  File "/Users/mac/Desktop/my_code/WebFramework/pom/common_login.py", line 14, in login_result
+    return self.login_page_obj.login(user, passwd)
+  File "/Users/mac/Desktop/my_code/WebFramework/page/loginpage.py", line 21, in login
+    self.find_element_and_send_keys(self.LoginPageRsrc.LOC_用户名框, user)
+  File "/Users/mac/Desktop/my_code/WebFramework/common/basepage.py", line 232, in find_element_and_send_keys
+    ele = self.find_element(locator)
+  File "/Users/mac/Desktop/my_code/WebFramework/common/basepage.py", line 70, in find_element
+    self.save_screenshot()
+  File "/Users/mac/Desktop/my_code/WebFramework/common/basepage.py", line 198, in save_screenshot
+    self.driver.save_screenshot(filepath)
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 1055, in save_screenshot
+    return self.get_screenshot_as_file(filename)
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 1032, in get_screenshot_as_file
+    png = self.get_screenshot_as_png()
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 1064, in get_screenshot_as_png
+    return base64.b64decode(self.get_screenshot_as_base64().encode('ascii'))
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 1074, in get_screenshot_as_base64
+    return self.execute(Command.SCREENSHOT)['value']
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=95.0.4638.69)
+
+[2021-11-01 19:51:15] [INFO] [conftest.py line:42]->>关闭浏览器,并重置driver
+[2021-11-01 19:51:15] [INFO] [conftest.py line:29]->>*************** 结束执行用例：test01_login ***************
+[2021-11-01 19:51:15] [INFO] [conftest.py line:27]->>*************** 开始执行用例：test01_login ***************
+[2021-11-01 19:51:15] [INFO] [browser.py line:107]->>打开chrome浏览器
+[2021-11-01 19:51:17] [INFO] [basepage.py line:49]->>导航到:https://maitenghuicai.com/login.html
+[2021-11-01 19:51:19] [INFO] [basepage.py line:64]->>定位元素：('xpath', '//input[@name="accounts"]'), 元素描述：LoginPageRsrc.LOC_用户名框
+[2021-11-01 19:51:19] [ERROR] [basepage.py line:69]->>元素定位失败,开始截图!
+[2021-11-01 19:51:19] [ERROR] [basepage.py line:203]->>截屏失败
+[2021-11-01 19:51:19] [ERROR] [logs.py line:59]->>test01_login(*args: tuple = (<testcases.test01_login.TestLogin object at 0x7fec01479210>,), **kwargs: dict = {'driver': <selenium.webdriver.chrome.webdriver.WebDriver (session="bd373c1f2f79c46b39b120c919674199")>, 'arg': ['mik', 'abc123456', '密码错误']})
+Traceback (most recent call last):
+  File "/Users/mac/Desktop/my_code/WebFramework/common/basepage.py", line 66, in find_element
+    ele = WebDriverWait(self.driver, self._timeout).until(EC.visibility_of_element_located(locator.value))
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/support/wait.py", line 71, in until
+    value = method(self._driver)
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/support/expected_conditions.py", line 128, in __call__
+    return _element_if_visible(_find_element(driver, self.locator))
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/support/expected_conditions.py", line 415, in _find_element
+    raise e
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/support/expected_conditions.py", line 411, in _find_element
+    return driver.find_element(*by)
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=95.0.4638.69)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mac/Desktop/my_code/WebFramework/utils/logs.py", line 50, in wrap_func
+    func(*args, **kwargs)
+  File "/Users/mac/Desktop/my_code/WebFramework/testcases/test01_login.py", line 34, in test01_login
+    res = page.login_result(arg[0], arg[1])
+  File "/Users/mac/Desktop/my_code/WebFramework/pom/common_login.py", line 14, in login_result
+    return self.login_page_obj.login(user, passwd)
+  File "/Users/mac/Desktop/my_code/WebFramework/page/loginpage.py", line 21, in login
+    self.find_element_and_send_keys(self.LoginPageRsrc.LOC_用户名框, user)
+  File "/Users/mac/Desktop/my_code/WebFramework/common/basepage.py", line 232, in find_element_and_send_keys
+    ele = self.find_element(locator)
+  File "/Users/mac/Desktop/my_code/WebFramework/common/basepage.py", line 70, in find_element
+    self.save_screenshot()
+  File "/Users/mac/Desktop/my_code/WebFramework/common/basepage.py", line 198, in save_screenshot
+    self.driver.save_screenshot(filepath)
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 1055, in save_screenshot
+    return self.get_screenshot_as_file(filename)
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 1032, in get_screenshot_as_file
+    png = self.get_screenshot_as_png()
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 1064, in get_screenshot_as_png
+    return base64.b64decode(self.get_screenshot_as_base64().encode('ascii'))
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 1074, in get_screenshot_as_base64
+    return self.execute(Command.SCREENSHOT)['value']
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=95.0.4638.69)
+
+[2021-11-01 19:51:22] [INFO] [conftest.py line:42]->>关闭浏览器,并重置driver
+[2021-11-01 19:51:22] [INFO] [conftest.py line:29]->>*************** 结束执行用例：test01_login ***************
+[2021-11-01 19:51:22] [INFO] [conftest.py line:27]->>*************** 开始执行用例：test01_login ***************
+[2021-11-01 19:51:22] [INFO] [browser.py line:107]->>打开chrome浏览器
+[2021-11-01 19:51:24] [INFO] [basepage.py line:49]->>导航到:https://maitenghuicai.com/login.html
+[2021-11-01 19:51:25] [INFO] [basepage.py line:64]->>定位元素：('xpath', '//input[@name="accounts"]'), 元素描述：LoginPageRsrc.LOC_用户名框
+[2021-11-01 19:51:25] [ERROR] [basepage.py line:69]->>元素定位失败,开始截图!
+[2021-11-01 19:51:25] [ERROR] [basepage.py line:203]->>截屏失败
+[2021-11-01 19:51:25] [ERROR] [logs.py line:59]->>test01_login(*args: tuple = (<testcases.test01_login.TestLogin object at 0x7fec0155e690>,), **kwargs: dict = {'driver': <selenium.webdriver.chrome.webdriver.WebDriver (session="a615363bf4cd867c730eca3699c79945")>, 'arg': ['mik2232', 123456, '登录帐号不存在']})
+Traceback (most recent call last):
+  File "/Users/mac/Desktop/my_code/WebFramework/common/basepage.py", line 66, in find_element
+    ele = WebDriverWait(self.driver, self._timeout).until(EC.visibility_of_element_located(locator.value))
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/support/wait.py", line 71, in until
+    value = method(self._driver)
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/support/expected_conditions.py", line 128, in __call__
+    return _element_if_visible(_find_element(driver, self.locator))
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/support/expected_conditions.py", line 415, in _find_element
+    raise e
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/support/expected_conditions.py", line 411, in _find_element
+    return driver.find_element(*by)
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=95.0.4638.69)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mac/Desktop/my_code/WebFramework/utils/logs.py", line 50, in wrap_func
+    func(*args, **kwargs)
+  File "/Users/mac/Desktop/my_code/WebFramework/testcases/test01_login.py", line 34, in test01_login
+    res = page.login_result(arg[0], arg[1])
+  File "/Users/mac/Desktop/my_code/WebFramework/pom/common_login.py", line 14, in login_result
+    return self.login_page_obj.login(user, passwd)
+  File "/Users/mac/Desktop/my_code/WebFramework/page/loginpage.py", line 21, in login
+    self.find_element_and_send_keys(self.LoginPageRsrc.LOC_用户名框, user)
+  File "/Users/mac/Desktop/my_code/WebFramework/common/basepage.py", line 232, in find_element_and_send_keys
+    ele = self.find_element(locator)
+  File "/Users/mac/Desktop/my_code/WebFramework/common/basepage.py", line 70, in find_element
+    self.save_screenshot()
+  File "/Users/mac/Desktop/my_code/WebFramework/common/basepage.py", line 198, in save_screenshot
+    self.driver.save_screenshot(filepath)
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 1055, in save_screenshot
+    return self.get_screenshot_as_file(filename)
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 1032, in get_screenshot_as_file
+    png = self.get_screenshot_as_png()
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 1064, in get_screenshot_as_png
+    return base64.b64decode(self.get_screenshot_as_base64().encode('ascii'))
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 1074, in get_screenshot_as_base64
+    return self.execute(Command.SCREENSHOT)['value']
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=95.0.4638.69)
+
+[2021-11-01 19:51:28] [INFO] [conftest.py line:42]->>关闭浏览器,并重置driver
+[2021-11-01 19:51:28] [INFO] [conftest.py line:29]->>*************** 结束执行用例：test01_login ***************
+[2021-11-01 19:51:28] [INFO] [conftest.py line:27]->>*************** 开始执行用例：test01_add_address ***************
+[2021-11-01 19:51:29] [INFO] [browser.py line:107]->>打开chrome浏览器
+[2021-11-01 19:51:31] [INFO] [reader.py line:43]->>加载文件:/Users/mac/Desktop/my_code/WebFramework/data/user_address_info_data.yaml
+[2021-11-01 19:51:31] [INFO] [reader.py line:43]->>加载文件:/Users/mac/Desktop/my_code/WebFramework/data/login_data.yaml
+[2021-11-01 19:51:31] [INFO] [basepage.py line:49]->>导航到:https://maitenghuicai.com/login.html
+[2021-11-01 19:51:32] [INFO] [basepage.py line:64]->>定位元素：('xpath', '//input[@name="accounts"]'), 元素描述：LoginPageRsrc.LOC_用户名框
+[2021-11-01 19:51:32] [ERROR] [basepage.py line:69]->>元素定位失败,开始截图!
+[2021-11-01 19:51:32] [ERROR] [basepage.py line:203]->>截屏失败
+[2021-11-01 19:51:32] [ERROR] [logs.py line:59]->>test01_add_address(*args: tuple = (<testcases.test02_change_user_address.TestAddress object at 0x7fec014b3790>,), **kwargs: dict = {'driver': <selenium.webdriver.chrome.webdriver.WebDriver (session="9d0b7100a261bc35d1e6de38cec03f32")>})
+Traceback (most recent call last):
+  File "/Users/mac/Desktop/my_code/WebFramework/common/basepage.py", line 66, in find_element
+    ele = WebDriverWait(self.driver, self._timeout).until(EC.visibility_of_element_located(locator.value))
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/support/wait.py", line 71, in until
+    value = method(self._driver)
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/support/expected_conditions.py", line 128, in __call__
+    return _element_if_visible(_find_element(driver, self.locator))
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/support/expected_conditions.py", line 415, in _find_element
+    raise e
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/support/expected_conditions.py", line 411, in _find_element
+    return driver.find_element(*by)
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=95.0.4638.69)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mac/Desktop/my_code/WebFramework/utils/logs.py", line 50, in wrap_func
+    func(*args, **kwargs)
+  File "/Users/mac/Desktop/my_code/WebFramework/testcases/test02_change_user_address.py", line 31, in test01_add_address
+    self.address_info[3])
+  File "/Users/mac/Desktop/my_code/WebFramework/pom/change_user_address.py", line 20, in add_address_form_homopage
+    self.login_page_obj.login(self.user_info[0], self.user_info[1])
+  File "/Users/mac/Desktop/my_code/WebFramework/page/loginpage.py", line 21, in login
+    self.find_element_and_send_keys(self.LoginPageRsrc.LOC_用户名框, user)
+  File "/Users/mac/Desktop/my_code/WebFramework/common/basepage.py", line 232, in find_element_and_send_keys
+    ele = self.find_element(locator)
+  File "/Users/mac/Desktop/my_code/WebFramework/common/basepage.py", line 70, in find_element
+    self.save_screenshot()
+  File "/Users/mac/Desktop/my_code/WebFramework/common/basepage.py", line 198, in save_screenshot
+    self.driver.save_screenshot(filepath)
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 1055, in save_screenshot
+    return self.get_screenshot_as_file(filename)
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 1032, in get_screenshot_as_file
+    png = self.get_screenshot_as_png()
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 1064, in get_screenshot_as_png
+    return base64.b64decode(self.get_screenshot_as_base64().encode('ascii'))
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 1074, in get_screenshot_as_base64
+    return self.execute(Command.SCREENSHOT)['value']
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=95.0.4638.69)
+
+[2021-11-01 19:51:35] [INFO] [conftest.py line:42]->>关闭浏览器,并重置driver
+[2021-11-01 19:51:35] [INFO] [conftest.py line:29]->>*************** 结束执行用例：test01_add_address ***************
+[2021-11-01 19:51:35] [INFO] [conftest.py line:27]->>*************** 开始执行用例：test01_shopcart ***************
+[2021-11-01 19:51:35] [INFO] [browser.py line:107]->>打开chrome浏览器
+[2021-11-01 19:51:38] [INFO] [reader.py line:43]->>加载文件:/Users/mac/Desktop/my_code/WebFramework/data/login_data.yaml
+[2021-11-01 19:51:38] [INFO] [basepage.py line:49]->>导航到:https://maitenghuicai.com/login.html
+[2021-11-01 19:51:39] [INFO] [basepage.py line:64]->>定位元素：('xpath', '//input[@name="accounts"]'), 元素描述：LoginPageRsrc.LOC_用户名框
+[2021-11-01 19:51:39] [ERROR] [basepage.py line:69]->>元素定位失败,开始截图!
+[2021-11-01 19:51:39] [ERROR] [basepage.py line:203]->>截屏失败
+[2021-11-01 19:51:39] [ERROR] [logs.py line:59]->>test01_shopcart(*args: tuple = (<testcases.test03_shopcart.TestShopcart object at 0x7fec014d5850>,), **kwargs: dict = {'driver': <selenium.webdriver.chrome.webdriver.WebDriver (session="d5572165dc0b5947a88b89e1542a6e57")>})
+Traceback (most recent call last):
+  File "/Users/mac/Desktop/my_code/WebFramework/common/basepage.py", line 66, in find_element
+    ele = WebDriverWait(self.driver, self._timeout).until(EC.visibility_of_element_located(locator.value))
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/support/wait.py", line 71, in until
+    value = method(self._driver)
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/support/expected_conditions.py", line 128, in __call__
+    return _element_if_visible(_find_element(driver, self.locator))
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/support/expected_conditions.py", line 415, in _find_element
+    raise e
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/support/expected_conditions.py", line 411, in _find_element
+    return driver.find_element(*by)
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=95.0.4638.69)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mac/Desktop/my_code/WebFramework/utils/logs.py", line 50, in wrap_func
+    func(*args, **kwargs)
+  File "/Users/mac/Desktop/my_code/WebFramework/testcases/test03_shopcart.py", line 28, in test01_shopcart
+    page.cart()
+  File "/Users/mac/Desktop/my_code/WebFramework/pom/shop_cart.py", line 18, in cart
+    self.login_page_obj.login(self.user_info[0], self.user_info[1])
+  File "/Users/mac/Desktop/my_code/WebFramework/page/loginpage.py", line 21, in login
+    self.find_element_and_send_keys(self.LoginPageRsrc.LOC_用户名框, user)
+  File "/Users/mac/Desktop/my_code/WebFramework/common/basepage.py", line 232, in find_element_and_send_keys
+    ele = self.find_element(locator)
+  File "/Users/mac/Desktop/my_code/WebFramework/common/basepage.py", line 70, in find_element
+    self.save_screenshot()
+  File "/Users/mac/Desktop/my_code/WebFramework/common/basepage.py", line 198, in save_screenshot
+    self.driver.save_screenshot(filepath)
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 1055, in save_screenshot
+    return self.get_screenshot_as_file(filename)
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 1032, in get_screenshot_as_file
+    png = self.get_screenshot_as_png()
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 1064, in get_screenshot_as_png
+    return base64.b64decode(self.get_screenshot_as_base64().encode('ascii'))
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 1074, in get_screenshot_as_base64
+    return self.execute(Command.SCREENSHOT)['value']
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=95.0.4638.69)
+
+[2021-11-01 19:51:42] [INFO] [conftest.py line:42]->>关闭浏览器,并重置driver
+[2021-11-01 19:51:42] [INFO] [conftest.py line:29]->>*************** 结束执行用例：test01_shopcart ***************

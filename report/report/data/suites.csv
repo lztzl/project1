@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Mon Nov 01 20:07:51 CST 2021","Mon Nov 01 20:07:54 CST 2021","3399","testcases","test01_login","TestLogin","","","测试数据",""
+"passed","Mon Nov 01 20:07:31 CST 2021","Mon Nov 01 20:07:35 CST 2021","3451","testcases","test01_login","TestLogin","","","测试数据",""
+"passed","Mon Nov 01 20:08:00 CST 2021","Mon Nov 01 20:08:14 CST 2021","14089","testcases","test02_change_user_address","TestAddress","","","测试数据",""
+"passed","Mon Nov 01 20:07:40 CST 2021","Mon Nov 01 20:07:45 CST 2021","5404","testcases","test01_login","TestLogin","","","测试数据",""

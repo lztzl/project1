@@ -1,0 +1,41 @@
+[ {
+  "uid" : "ddbc246e293ac686",
+  "name" : "测试数据",
+  "time" : {
+    "start" : 1635768471392,
+    "stop" : 1635768474791,
+    "duration" : 3399
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+}, {
+  "uid" : "ec68ecfbbf7eeb2d",
+  "name" : "测试数据",
+  "time" : {
+    "start" : 1635768451613,
+    "stop" : 1635768455064,
+    "duration" : 3451
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+}, {
+  "uid" : "35933001b0de4cf8",
+  "name" : "测试数据",
+  "time" : {
+    "start" : 1635768480273,
+    "stop" : 1635768494362,
+    "duration" : 14089
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+}, {
+  "uid" : "827bd25d56cb6f3b",
+  "name" : "测试数据",
+  "time" : {
+    "start" : 1635768460559,
+    "stop" : 1635768465963,
+    "duration" : 5404
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+} ]
