@@ -16,7 +16,7 @@ def creation_logger(level):
     :return:
     """
     # 设置路径
-    now_time = datetime.datetime.now().strftime('%Y-%m-%d-%H:%M')
+    now_time = datetime.datetime.now().strftime('%Y-%m-%d-%H-%M')
     path_file = f'{LOG_PATH}{now_time}.log'
     # 创建日志器
     log = logging.getLogger()
