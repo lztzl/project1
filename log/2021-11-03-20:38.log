@@ -1,0 +1,119 @@
+[2021-11-03 20:38:38] [INFO] [conftest.py line:34]->>开始清理截图和日志文件...
+[2021-11-03 20:38:38] [INFO] [clear.py line:19]->>开始清理截图
+[2021-11-03 20:38:38] [INFO] [clear.py line:30]->>清除截图完成
+[2021-11-03 20:38:38] [INFO] [clear.py line:45]->>开始清理log
+[2021-11-03 20:38:38] [INFO] [clear.py line:55]->>log清理完成
+[2021-11-03 20:38:38] [INFO] [reader.py line:43]->>加载文件:/Users/mac/Desktop/my_code/WebFramework/data/login_data.yaml
+[2021-11-03 20:38:38] [INFO] [reader.py line:43]->>加载文件:/Users/mac/Desktop/my_code/WebFramework/data/login_data.yaml
+[2021-11-03 20:38:38] [INFO] [conftest.py line:71]->>*************** 开始执行用例：test01_login ***************
+[2021-11-03 20:38:40] [INFO] [basepage.py line:49]->>导航到:https://maitenghuicai.com/login.html
+[2021-11-03 20:38:43] [INFO] [basepage.py line:64]->>定位元素：('xpath', '//input[@name="accounts"]'), 元素描述：LoginPageRsrc.LOC_用户名框
+[2021-11-03 20:38:43] [INFO] [basepage.py line:73]->>元素定位成功:耗时0.121秒!
+[2021-11-03 20:38:43] [INFO] [basepage.py line:234]->>输入内容:"mik", 元素描述:LoginPageRsrc.LOC_用户名框
+[2021-11-03 20:38:43] [INFO] [basepage.py line:64]->>定位元素：('xpath', '//input[@name="pwd"]'), 元素描述：LoginPageRsrc.LOC_密码框
+[2021-11-03 20:38:43] [INFO] [basepage.py line:73]->>元素定位成功:耗时0.021秒!
+[2021-11-03 20:38:43] [INFO] [basepage.py line:234]->>输入内容:"123456", 元素描述:LoginPageRsrc.LOC_密码框
+[2021-11-03 20:38:43] [INFO] [basepage.py line:64]->>定位元素：('xpath', '//input[@name="accounts"]'), 元素描述：LoginPageRsrc.LOC_用户名框
+[2021-11-03 20:38:43] [INFO] [basepage.py line:73]->>元素定位成功:耗时0.02秒!
+[2021-11-03 20:38:43] [INFO] [basepage.py line:283]->>提交form表单
+[2021-11-03 20:38:43] [INFO] [basepage.py line:64]->>定位元素：('xpath', '//p[@class="prompt-msg"]'), 元素描述：LoginPageRsrc.LOC_登陆结果
+[2021-11-03 20:38:43] [INFO] [basepage.py line:73]->>元素定位成功:耗时0.011秒!
+[2021-11-03 20:38:43] [INFO] [basepage.py line:299]->>获取文本:"密码格式 6~18 个字符", 元素描述：LoginPageRsrc.LOC_登陆结果
+[2021-11-03 20:38:43] [ERROR] [logs.py line:60]->>test01_login(*args: tuple = (<testcases.test01_login.TestLogin object at 0x7fde6b284950>,), **kwargs: dict = {'driver': <selenium.webdriver.safari.webdriver.WebDriver (session="F2251FC3-ABE9-4796-B515-96D12181C2D3")>, 'arg': ['mik', 123456, '登录成功']})
+Traceback (most recent call last):
+  File "/Users/mac/Desktop/my_code/WebFramework/utils/logs.py", line 51, in wrap_func
+    func(*args, **kwargs)
+  File "/Users/mac/Desktop/my_code/WebFramework/testcases/test01_login.py", line 35, in test01_login
+    assert res == arg[2]
+AssertionError: assert '密码格式 6~18 个字符' == '登录成功'
+  - 登录成功
+  + 密码格式 6~18 个字符
+[2021-11-03 20:38:46] [INFO] [conftest.py line:63]->>关闭浏览器,并重置driver
+[2021-11-03 20:38:46] [INFO] [conftest.py line:73]->>*************** 结束执行用例：test01_login ***************
+[2021-11-03 20:38:46] [INFO] [conftest.py line:71]->>*************** 开始执行用例：test01_login ***************
+[2021-11-03 20:38:48] [INFO] [basepage.py line:49]->>导航到:https://maitenghuicai.com/login.html
+[2021-11-03 20:38:50] [INFO] [basepage.py line:64]->>定位元素：('xpath', '//input[@name="accounts"]'), 元素描述：LoginPageRsrc.LOC_用户名框
+[2021-11-03 20:38:50] [INFO] [basepage.py line:73]->>元素定位成功:耗时0.099秒!
+[2021-11-03 20:38:50] [INFO] [basepage.py line:234]->>输入内容:"mik", 元素描述:LoginPageRsrc.LOC_用户名框
+[2021-11-03 20:38:51] [INFO] [basepage.py line:64]->>定位元素：('xpath', '//input[@name="pwd"]'), 元素描述：LoginPageRsrc.LOC_密码框
+[2021-11-03 20:38:51] [INFO] [basepage.py line:73]->>元素定位成功:耗时0.016秒!
+[2021-11-03 20:38:51] [INFO] [basepage.py line:234]->>输入内容:"abc123456", 元素描述:LoginPageRsrc.LOC_密码框
+[2021-11-03 20:38:51] [INFO] [basepage.py line:64]->>定位元素：('xpath', '//input[@name="accounts"]'), 元素描述：LoginPageRsrc.LOC_用户名框
+[2021-11-03 20:38:51] [INFO] [basepage.py line:73]->>元素定位成功:耗时0.025秒!
+[2021-11-03 20:38:51] [INFO] [basepage.py line:283]->>提交form表单
+[2021-11-03 20:38:51] [INFO] [basepage.py line:64]->>定位元素：('xpath', '//p[@class="prompt-msg"]'), 元素描述：LoginPageRsrc.LOC_登陆结果
+[2021-11-03 20:38:51] [INFO] [basepage.py line:73]->>元素定位成功:耗时0.012秒!
+[2021-11-03 20:38:51] [INFO] [basepage.py line:299]->>获取文本:"密码格式 6~18 个字符", 元素描述：LoginPageRsrc.LOC_登陆结果
+[2021-11-03 20:38:51] [ERROR] [logs.py line:60]->>test01_login(*args: tuple = (<testcases.test01_login.TestLogin object at 0x7fde6af34950>,), **kwargs: dict = {'driver': <selenium.webdriver.safari.webdriver.WebDriver (session="944C28F5-B6C9-4A81-B170-FF4E95D4C587")>, 'arg': ['mik', 'abc123456', '密码错误']})
+Traceback (most recent call last):
+  File "/Users/mac/Desktop/my_code/WebFramework/utils/logs.py", line 51, in wrap_func
+    func(*args, **kwargs)
+  File "/Users/mac/Desktop/my_code/WebFramework/testcases/test01_login.py", line 35, in test01_login
+    assert res == arg[2]
+AssertionError: assert '密码格式 6~18 个字符' == '密码错误'
+  - 密码错误
+  + 密码格式 6~18 个字符
+[2021-11-03 20:38:54] [INFO] [conftest.py line:63]->>关闭浏览器,并重置driver
+[2021-11-03 20:38:54] [INFO] [conftest.py line:73]->>*************** 结束执行用例：test01_login ***************
+[2021-11-03 20:38:54] [INFO] [conftest.py line:71]->>*************** 开始执行用例：test01_login ***************
+[2021-11-03 20:38:55] [INFO] [basepage.py line:49]->>导航到:https://maitenghuicai.com/login.html
+[2021-11-03 20:38:58] [INFO] [basepage.py line:64]->>定位元素：('xpath', '//input[@name="accounts"]'), 元素描述：LoginPageRsrc.LOC_用户名框
+[2021-11-03 20:38:58] [INFO] [basepage.py line:73]->>元素定位成功:耗时0.095秒!
+[2021-11-03 20:38:58] [INFO] [basepage.py line:234]->>输入内容:"mik2232", 元素描述:LoginPageRsrc.LOC_用户名框
+[2021-11-03 20:38:58] [INFO] [basepage.py line:64]->>定位元素：('xpath', '//input[@name="pwd"]'), 元素描述：LoginPageRsrc.LOC_密码框
+[2021-11-03 20:38:58] [INFO] [basepage.py line:73]->>元素定位成功:耗时0.024秒!
+[2021-11-03 20:38:58] [INFO] [basepage.py line:234]->>输入内容:"123456", 元素描述:LoginPageRsrc.LOC_密码框
+[2021-11-03 20:38:58] [INFO] [basepage.py line:64]->>定位元素：('xpath', '//input[@name="accounts"]'), 元素描述：LoginPageRsrc.LOC_用户名框
+[2021-11-03 20:38:58] [INFO] [basepage.py line:73]->>元素定位成功:耗时0.025秒!
+[2021-11-03 20:38:58] [INFO] [basepage.py line:283]->>提交form表单
+[2021-11-03 20:38:58] [INFO] [basepage.py line:64]->>定位元素：('xpath', '//p[@class="prompt-msg"]'), 元素描述：LoginPageRsrc.LOC_登陆结果
+[2021-11-03 20:38:58] [INFO] [basepage.py line:73]->>元素定位成功:耗时0.012秒!
+[2021-11-03 20:38:58] [INFO] [basepage.py line:299]->>获取文本:"密码格式 6~18 个字符", 元素描述：LoginPageRsrc.LOC_登陆结果
+[2021-11-03 20:38:58] [ERROR] [logs.py line:60]->>test01_login(*args: tuple = (<testcases.test01_login.TestLogin object at 0x7fde6b3578d0>,), **kwargs: dict = {'driver': <selenium.webdriver.safari.webdriver.WebDriver (session="87E9FA28-2A80-4F2D-900B-DC2D9A6E29AF")>, 'arg': ['mik2232', 123456, '登录帐号不存在']})
+Traceback (most recent call last):
+  File "/Users/mac/Desktop/my_code/WebFramework/utils/logs.py", line 51, in wrap_func
+    func(*args, **kwargs)
+  File "/Users/mac/Desktop/my_code/WebFramework/testcases/test01_login.py", line 35, in test01_login
+    assert res == arg[2]
+AssertionError: assert '密码格式 6~18 个字符' == '登录帐号不存在'
+  - 登录帐号不存在
+  + 密码格式 6~18 个字符
+[2021-11-03 20:39:01] [INFO] [conftest.py line:63]->>关闭浏览器,并重置driver
+[2021-11-03 20:39:01] [INFO] [conftest.py line:73]->>*************** 结束执行用例：test01_login ***************
+[2021-11-03 20:39:01] [INFO] [conftest.py line:71]->>*************** 开始执行用例：test01_add_address ***************
+[2021-11-03 20:39:03] [INFO] [reader.py line:43]->>加载文件:/Users/mac/Desktop/my_code/WebFramework/data/user_address_info_data.yaml
+[2021-11-03 20:39:03] [INFO] [basepage.py line:49]->>导航到:https://maitenghuicai.com/login.html
+[2021-11-03 20:39:05] [INFO] [basepage.py line:64]->>定位元素：('xpath', '//input[@name="accounts"]'), 元素描述：LoginPageRsrc.LOC_用户名框
+[2021-11-03 20:39:05] [INFO] [basepage.py line:73]->>元素定位成功:耗时0.031秒!
+[2021-11-03 20:39:05] [INFO] [basepage.py line:234]->>输入内容:"mik", 元素描述:LoginPageRsrc.LOC_用户名框
+[2021-11-03 20:39:05] [INFO] [basepage.py line:64]->>定位元素：('xpath', '//input[@name="pwd"]'), 元素描述：LoginPageRsrc.LOC_密码框
+[2021-11-03 20:39:05] [INFO] [basepage.py line:73]->>元素定位成功:耗时0.023秒!
+[2021-11-03 20:39:05] [INFO] [basepage.py line:234]->>输入内容:"123456", 元素描述:LoginPageRsrc.LOC_密码框
+[2021-11-03 20:39:05] [INFO] [basepage.py line:64]->>定位元素：('xpath', '//input[@name="accounts"]'), 元素描述：LoginPageRsrc.LOC_用户名框
+[2021-11-03 20:39:05] [INFO] [basepage.py line:73]->>元素定位成功:耗时0.025秒!
+[2021-11-03 20:39:05] [INFO] [basepage.py line:283]->>提交form表单
+[2021-11-03 20:39:05] [INFO] [basepage.py line:64]->>定位元素：('xpath', '//p[@class="prompt-msg"]'), 元素描述：LoginPageRsrc.LOC_登陆结果
+[2021-11-03 20:39:05] [INFO] [basepage.py line:73]->>元素定位成功:耗时0.011秒!
+[2021-11-03 20:39:05] [INFO] [basepage.py line:299]->>获取文本:"密码格式 6~18 个字符", 元素描述：LoginPageRsrc.LOC_登陆结果
+[2021-11-03 20:39:05] [INFO] [basepage.py line:49]->>导航到:https://maitenghuicai.com/useraddress/index.html
+[2021-11-03 20:39:06] [INFO] [basepage.py line:64]->>定位元素：('xpath', '//*[@data-popup-title="新增地址"]'), 元素描述：UserAddressPageRsrc.LOC_新增地址按钮
+[2021-11-03 20:39:16] [ERROR] [basepage.py line:69]->>元素定位失败,开始截图!
+[2021-11-03 20:39:16] [INFO] [basepage.py line:199]->>window截屏成功,图片路径为:/Users/mac/Desktop/my_code/WebFramework/imgs/2021-11-03-20-39-16.png
+[2021-11-03 20:39:17] [ERROR] [logs.py line:60]->>test01_add_address(*args: tuple = (<testcases.test02_change_user_address.TestAddress object at 0x7fde6b409090>,), **kwargs: dict = {'driver': <selenium.webdriver.safari.webdriver.WebDriver (session="CADE5B82-3612-46AF-8F08-2E9F79D9B9FF")>})
+Traceback (most recent call last):
+  File "/Users/mac/Desktop/my_code/WebFramework/utils/logs.py", line 51, in wrap_func
+    func(*args, **kwargs)
+  File "/Users/mac/Desktop/my_code/WebFramework/testcases/test02_change_user_address.py", line 31, in test01_add_address
+    self.address_info[3])
+  File "/Users/mac/Desktop/my_code/WebFramework/pom/change_user_address.py", line 22, in add_address_form_homopage
+    self.user_address_page_obj.find_element_and_click(self.user_address_page_obj.UserAddressPageRsrc.LOC_新增地址按钮)
+  File "/Users/mac/Desktop/my_code/WebFramework/common/basepage.py", line 248, in find_element_and_click
+    ele = self.find_element(locator=locator)
+  File "/Users/mac/Desktop/my_code/WebFramework/common/basepage.py", line 66, in find_element
+    ele = WebDriverWait(self.driver, self._timeout).until(EC.visibility_of_element_located(locator.value))
+  File "/Users/mac/Desktop/my_code/WebFramework/venv/lib/python3.7/site-packages/selenium/webdriver/support/wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+[2021-11-03 20:39:20] [INFO] [conftest.py line:63]->>关闭浏览器,并重置driver
+[2021-11-03 20:39:20] [INFO] [conftest.py line:73]->>*************** 结束执行用例：test01_add_address ***************

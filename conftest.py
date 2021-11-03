@@ -3,7 +3,7 @@
 # @Time    : 2021/7/17 
 # @Author  : Mik
 import pytest
-from common.browser import CHROME, FIREFOX, IE, SAFARI, EDGE
+from common.browser import MyChrome, MyFirefox, IE, MySafari, MyEdge
 from setting import IMG_PATH, LOG_PATH
 from utils.logs import logger
 from utils.clear import clear_img, clear_log
@@ -11,11 +11,11 @@ from utils.clear import clear_img, clear_log
 _driver = None
 
 _browser = {
-    'chrome': CHROME,
-    'firefox': FIREFOX,
-    'safari': SAFARI,
+    'chrome': MyChrome,
+    'firefox': MyFirefox,
+    'safari': MySafari,
     'ie': IE,
-    'edge': EDGE
+    'edge': MyEdge
 }
 
 
@@ -23,7 +23,11 @@ def pytest_addoption(parser):
     """添加命令行参数--browser"""
     parser.addoption(
         "--browser", action="store", default="chrome", choices=["firefox", "chrome", "safari", "ie", "edge"],
-        help="browser option: firefox,chrome,ie,safari,edge"
+        help="--browser: firefox,chrome,ie,safari,edge"
+    )
+    parser.addoption(
+        "--options", action="store", default=1, choices=['0', '1'],
+        help="--options: 0,1 ..."
     )
 
 
@@ -38,11 +42,15 @@ def driver(request):
     """定义全局driver参数"""
     global _driver
     bs_name = request.config.getoption("--browser")
+    option_id = int(request.config.getoption("--options"))
     if _driver is None:
         try:
-            _driver = _browser[bs_name]().browser
+            if bs_name == "safari":
+                _driver = _browser[bs_name]().browser
+            else:
+                _driver = _browser[bs_name]().browser(option_id)
         except Exception:
-            logger.exception('打开浏览器失败！')
+            logger.error('打开浏览器失败!')
             raise
 
     # def fn():
