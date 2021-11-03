@@ -8,5 +8,7 @@ from selenium.webdriver.common.keys import Keys
 
 class KeyEvent(Keys):
     """解包才能用 eg:send_keys(*KeyEvent.COPY)"""
-    COPY = Keys.CONTROL, 'c'
-    PASTE = Keys.CONTROL, 'v'
+    Copy = Keys.CONTROL, 'c'
+    Paste = Keys.CONTROL, 'v'
+    Cut = keys.CONTROL, 'x'
+    
