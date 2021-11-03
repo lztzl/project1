@@ -25,7 +25,7 @@
 1.  git@gitee.com:mikb/web_framework.git       拉取代码
 2.  pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple/      安装依赖库
 3.  修改config,setting配置文件,确保driver路径和版本正确
-4.  项目根目录执行pytest，默认启动chrome。也可以通过--browser 参数配置启动浏览器。（栗：pytest --browser=ie）
+4.  项目根目录执行pytest，默认启动chrome
 
 
 #### 目录结构
@@ -76,8 +76,9 @@
 4.  pom采用类继承basepage类封装跨页面业务逻辑供case层调用，常用业务操作可封装成common类供pom层调用
 5.  case层提供driver，测试数据，调用pom完成用例并进行断言操作
 6.  本框架使用遵循上述原则，方便后期维护最好相关方法不要乱写
-4.  本框架会陆续优化，如果各位有什么建议 欢迎给我留言，会尽力解决~~
-
+7.  本框架会陆续优化，如果各位有什么建议 欢迎给我留言，会尽力解决~~
+8.  启动参数--browser 配置启动浏览器（栗：pytest --browser=ie）
+9.  启动参数--options 配置启动option 默认启动option1(自定义需要自己写option方法)
 
 #### 实现功能
 1.  底层操作方法采用异常处理，log和EC模块封装，提高框架执行效率和稳定性
@@ -94,6 +95,7 @@
 12. 采用枚举管理页面资源，方便后期维护
 13. 底层方法大多与selenium接口同名或者见名知其意，方便团队其他人使用
 14. 支持谷歌，火狐，IE，Safari Edge浏览器以及远程启动
+15. 自定义启动options,并通过pytest参数选择
 
 #### 待开发
 1.  分布式多线程执行
