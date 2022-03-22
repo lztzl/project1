@@ -232,7 +232,7 @@ class BasePage:
         ele = self.find_element(locator)
         try:
             logger.info('输入内容:"{}", 元素描述:{}'.format(text, locator))
-            ele.clear()
+            # ele.clear()
             ele.send_keys(text)
         except Exception:
             logger.error('输入失败!,开始截图')

@@ -4,6 +4,13 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/venv" />
       <excludeFolder url="file://$MODULE_DIR$/report/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/report/report/plugins/jira" />
+      <excludeFolder url="file://$MODULE_DIR$/report/report/plugins/junit" />
+      <excludeFolder url="file://$MODULE_DIR$/report/report/plugins/trx" />
+      <excludeFolder url="file://$MODULE_DIR$/report/report/plugins/xctest" />
+      <excludeFolder url="file://$MODULE_DIR$/report/report/plugins/xray" />
+      <excludeFolder url="file://$MODULE_DIR$/report/report/plugins/xunit-xml" />
+      <excludeFolder url="file://$MODULE_DIR$/.pytest_cache" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.7 (web-framework)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

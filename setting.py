@@ -30,7 +30,7 @@ SEP = os.sep  # 路径分隔符
 # 浏览器驱动文件地址
 CHROME_DRIVER_PATH = join(BASE_PATH, f'drivers{SEP}chromedriver')
 EDGE_DRIVER_PATH = join(BASE_PATH, f'drivers{SEP}edge_driver')
-FIREFOX_DRIVER_PATH = join(BASE_PATH, f'drivers{SEP}geckodriver')
+FIREFOX_DRIVER_PATH = join(BASE_PATH, f'drivers{SEP}geckodriver.exe')
 IE_DRIVER_PATH = join(BASE_PATH, f'drivers{SEP}IEDriverServer')
 OPERA_DRIVER_PATH = join(BASE_PATH, f'drivers{SEP}opera_driver')
 
