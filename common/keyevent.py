@@ -10,5 +10,5 @@ class KeyEvent(Keys):
     """解包才能用 eg:send_keys(*KeyEvent.COPY)"""
     Copy = Keys.CONTROL, 'c'
     Paste = Keys.CONTROL, 'v'
-    Cut = keys.CONTROL, 'x'
+    Cut = Keys.CONTROL, 'x'
     
