@@ -19,9 +19,9 @@ class ChangeUserAddress:
     def add_address_form_homopage(self, alias, name, phone, address):
         self.login_page_obj.login(self.user_info[0], self.user_info[1])
         self.user_address_page_obj.get(self.user_address_page_obj.UserAddressPageRsrc.URL_Address.value)
-        self.user_address_page_obj.find_element_and_click(self.user_address_page_obj.UserAddressPageRsrc.LOC_新增地址按钮)
+        self.user_address_page_obj.click(self.user_address_page_obj.UserAddressPageRsrc.LOC_新增地址按钮)
         self.user_address_page_obj.switch_iframe(self.user_address_page_obj.UserAddressPageRsrc.LOC_iframe)
         res = self.user_address_page_obj.add_address(alias, name, phone, address)
-        self.user_address_page_obj.find_element_and_screenshot(
+        self.user_address_page_obj.screenshot(
             self.user_address_page_obj.UserAddressPageRsrc.LOC_添加地址结果)
         return res

@@ -222,24 +222,26 @@ class BasePage:
 
     # #############元素操作部分#############
 
-    def find_element_and_send_keys(self, locator: Enum, text: str) -> None:
+    def send_keys(self, locator: Enum, text: str, clear=False) -> None:
         """
         输入操作
         :param locator:元素定位表达式
         :param text: 输入内容
+        :param clear: 是否在执行输入前清除内容
         :return:
         """
         ele = self.find_element(locator)
         try:
             logger.info('输入内容:"{}", 元素描述:{}'.format(text, locator))
-            # ele.clear()
+            if clear:
+                ele.clear()
             ele.send_keys(text)
         except Exception:
             logger.error('输入失败!,开始截图')
             self.save_screenshot()
             raise
 
-    def find_element_and_click(self, locator: Enum) -> None:
+    def click(self, locator: Enum) -> None:
         """
         点击操作
         :param locator:元素定位表达式
@@ -255,7 +257,7 @@ class BasePage:
             self.save_screenshot()
             raise Exception("元素不可点击")
 
-    def find_element_and_screenshot(self, locator: Enum) -> None:
+    def screenshot(self, locator: Enum) -> None:
         """
         元素截图
         :return: None
@@ -271,7 +273,7 @@ class BasePage:
             logger.error("元素截图失败")
             raise
 
-    def find_element_and_submit(self, locator: Enum) -> None:
+    def submit(self, locator: Enum) -> None:
         """
         提交form表单操作，元素定位在form表单中任意元素即可
         记住只能在form表单中使用，一般在submit难定位时使用
@@ -312,7 +314,7 @@ class BasePage:
         """
         if self.checkbox_status(locator):
             logger.info("取消复选框")
-            self.find_element_and_click(locator)
+            self.click(locator)
         else:
             logger.info('复选框没有选择')
 
@@ -324,7 +326,7 @@ class BasePage:
         """
         if not self.checkbox_status(locator):
             logger.info("选择复选框")
-            self.find_element_and_click(locator)
+            self.click(locator)
         else:
             logger.info('复选框已是选择')
 

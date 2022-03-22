@@ -18,7 +18,7 @@ class LoginPage(BasePage):
 
     def login(self, user, passwd):
         self.get(self.LoginPageRsrc.URL_LOGIN.value)
-        self.find_element_and_send_keys(self.LoginPageRsrc.LOC_用户名框, user)
-        self.find_element_and_send_keys(self.LoginPageRsrc.LOC_密码框, passwd)
-        self.find_element_and_submit(self.LoginPageRsrc.LOC_用户名框)
+        self.send_keys(self.LoginPageRsrc.LOC_用户名框, user)
+        self.send_keys(self.LoginPageRsrc.LOC_密码框, passwd)
+        self.submit(self.LoginPageRsrc.LOC_用户名框)
         return self.get_text(self.LoginPageRsrc.LOC_登陆结果)
