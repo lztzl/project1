@@ -60,4 +60,6 @@ GRID_MARK = False
 # grid启动url
 COMMAND_REMOTE_EXECUTOR = 'http://localhost:4444/wd/hub'
 
+FIREFOX_SERVICE_LOG_PATH = LOG_PATH+"server.log"
+
 # ---------------------浏览器对象属性---------------------
