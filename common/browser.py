@@ -183,7 +183,7 @@ class MyFirefox(Browser):
                                    desired_capabilities=DesiredCapabilities.FIREFOX.copy(),
                                    options=option)
         else:
-            firefox = self._driver(executable_path=self._path, options=option, service_log_path=FIREFOX_SERVICE_LOG_PATH)
+            firefox = self._driver(executable_path=self._path, options=option,service_log_path=FIREFOX_SERVICE_LOG_PATH)
 
         firefox.maximize_window()
         return firefox
