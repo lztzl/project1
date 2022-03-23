@@ -55,7 +55,7 @@ DATABASE_INI_PATH = join(BASE_PATH, f'config{SEP}database.ini')
 TIMEOUT = 10
 
 # 开启grid开关
-GRID_MARK = True
+GRID_MARK = False
 
 # grid启动url
 COMMAND_REMOTE_EXECUTOR = 'http://81.68.118.175:4444/wd/hub'

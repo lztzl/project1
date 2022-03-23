@@ -25,8 +25,9 @@ class SearchCommodity(BasePage):
     def search(self):
         self.send_keys(SearchResources.LOC_搜索框, '鞋')
         self.click(SearchResources.LOC_搜索按钮)
+        hand = self.get_handles()
         self.click(SearchResources.LOC_物品品框)
-        self.switch_window(self.get_handles())
+        self.switch_window(hand)
         self.click(SearchResources.LOC_商品型号)
         self.click(SearchResources.LOC_加入购物车)
 
