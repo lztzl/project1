@@ -34,8 +34,8 @@ class Browser:
     EDGE_DRIVER_PATH = EDGE_DRIVER_PATH
     OPERA_DRIVER_PATH = OPERA_DRIVER_PATH
     IE_DRIVER_PATH = IE_DRIVER_PATH
+
     # 启动grid配置
-    GRID_MARK = GRID_MARK
 
     def __init__(self, browser_type: Type[Union[Chrome, Ie, Firefox, Edge, Opera, Safari]] = Chrome,
                  option_type: Type[
@@ -54,6 +54,11 @@ class Browser:
 
 
 class MyChrome(Browser):
+
+    def __init__(self, grid):
+        self.GRID_MARK = grid
+        super(MyChrome, self).__init__(
+        )
 
     @property
     def _option1(self):
@@ -105,7 +110,8 @@ class MyChrome(Browser):
 
 class IE(Browser):
 
-    def __init__(self):
+    def __init__(self, grid):
+        self.GRID_MARK = grid
         super(IE, self).__init__(
             browser_type=Ie,
             option_type=IeOptions,
@@ -149,7 +155,8 @@ class IE(Browser):
 
 class MyFirefox(Browser):
 
-    def __init__(self):
+    def __init__(self, grid):
+        self.GRID_MARK = grid
         super(MyFirefox, self).__init__(
             browser_type=Firefox,
             option_type=FirefoxOptions,
@@ -183,7 +190,8 @@ class MyFirefox(Browser):
                                    desired_capabilities=DesiredCapabilities.FIREFOX.copy(),
                                    options=option)
         else:
-            firefox = self._driver(executable_path=self._path, options=option,service_log_path=FIREFOX_SERVICE_LOG_PATH)
+            firefox = self._driver(executable_path=self._path, options=option,
+                                   service_log_path=FIREFOX_SERVICE_LOG_PATH)
 
         firefox.maximize_window()
         return firefox
@@ -191,7 +199,8 @@ class MyFirefox(Browser):
 
 class MyEdge(Browser):
 
-    def __init__(self):
+    def __init__(self, grid):
+        self.GRID_MARK = grid
         super(MyEdge, self).__init__(
             browser_type=Edge,
             option_type=EdgeOptions,
@@ -233,7 +242,8 @@ class MyEdge(Browser):
 
 class MySafari(Browser):
 
-    def __init__(self):
+    def __init__(self, grid):
+        self.GRID_MARK = grid
         super(MySafari, self).__init__(
             browser_type=Safari,
         )

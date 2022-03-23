@@ -26,6 +26,11 @@ def pytest_addoption(parser):
         help="--browser: firefox,chrome,ie,safari,edge"
     )
     parser.addoption(
+        "--grid", action="store", default="0", choices=["0", "1"],
+        help="--grid: 1打开grid，0关闭grid"
+    )
+
+    parser.addoption(
         "--options", action="store", default=1, choices=['0', '1'],
         help="--options: 0,1 ..."
     )
@@ -43,12 +48,13 @@ def driver(request):
     global _driver
     bs_name = request.config.getoption("--browser")
     option_id = int(request.config.getoption("--options"))
+    grid = int(request.config.getoption("--grid"))
     if _driver is None:
         try:
             if bs_name == "safari":
                 _driver = _browser[bs_name]().browser
             else:
-                _driver = _browser[bs_name]().browser(option_id)
+                _driver = _browser[bs_name](grid).browser(option_id)
         except Exception:
             logger.error('打开浏览器失败!')
             raise
