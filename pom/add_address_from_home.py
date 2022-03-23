@@ -1,16 +1,17 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# @Time    : 2021/10/22
-# @Author  : Mik
+# @Time : 2022/3/23
+# @Author : Mik
+
 from selenium.webdriver.common.by import By
-from setting import PROJECT_01_URL
+from setting import URL_01
 from common.basepage import BasePage
 from enum import Enum, unique
 
 
 @unique
-class UserAddressPageRsrc(Enum):
-    URL_Address = f"{PROJECT_01_URL}/useraddress/index.html"
+class UserAddressResources(Enum):
+    URL_Address = f"{URL_01}/useraddress/index.html"
     LOC_新增地址按钮 = By.XPATH, '//*[@data-popup-title="新增地址"]'
     LOC_iframe = By.XPATH, '//iframe[@src="https://maitenghuicai.com/useraddress/saveinfo.html"]'
     LOC_别名框 = By.XPATH, '//input[@placeholder="别名"]'
@@ -27,27 +28,30 @@ class UserAddressPageRsrc(Enum):
     LOC_添加地址结果 = By.XPATH, '//p[@class="prompt-msg"]'
 
 
-class UserAddressPage(BasePage):
+class UserAddress(BasePage):
 
     def add_address(self, alias, name, phone, address):
-        self.send_keys(UserAddressPageRsrc.LOC_别名框, alias)
-        self.send_keys(UserAddressPageRsrc.LOC_姓名框, name)
-        self.send_keys(UserAddressPageRsrc.LOC_电话框, phone)
-        self.send_keys(UserAddressPageRsrc.LOC_详细地址框, address)
+        self.get(UserAddressResources.URL_Address.value)
+        self.click(UserAddressResources.LOC_新增地址按钮)
+        self.switch_iframe(UserAddressResources.LOC_iframe)
+        self.send_keys(UserAddressResources.LOC_别名框, alias)
+        self.send_keys(UserAddressResources.LOC_姓名框, name)
+        self.send_keys(UserAddressResources.LOC_电话框, phone)
+        self.send_keys(UserAddressResources.LOC_详细地址框, address)
         self.sleep(1)
-        self.click(UserAddressPageRsrc.LOC_省下拉按钮)
+        self.click(UserAddressResources.LOC_省下拉按钮)
         self.sleep(1)
-        self.click(UserAddressPageRsrc.LOC_选择省)
+        self.click(UserAddressResources.LOC_选择省)
         self.sleep(1)
-        self.click(UserAddressPageRsrc.LOC_市下拉框按钮)
+        self.click(UserAddressResources.LOC_市下拉框按钮)
         self.sleep(1)
-        self.click(UserAddressPageRsrc.LOC_选择市)
+        self.click(UserAddressResources.LOC_选择市)
         self.sleep(1)
-        self.click(UserAddressPageRsrc.LOC_区下拉框按钮)
+        self.click(UserAddressResources.LOC_区下拉框按钮)
         self.sleep(1)
-        self.click(UserAddressPageRsrc.LOC_选择区)
-        self.scroll_into_view_by_js(UserAddressPageRsrc.LOC_保存按钮)
+        self.click(UserAddressResources.LOC_选择区)
+        self.scroll_into_view_by_js(UserAddressResources.LOC_保存按钮)
         self.sleep(1)
-        self.click(UserAddressPageRsrc.LOC_保存按钮)
+        self.click(UserAddressResources.LOC_保存按钮)
         self.sleep(0.5)
-        return self.get_text(UserAddressPageRsrc.LOC_添加地址结果)
+        return self.get_text(UserAddressResources.LOC_添加地址结果)

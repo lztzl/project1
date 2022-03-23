@@ -12,7 +12,7 @@ from os.path import dirname, join
 
 # ---------------------项目地址---------------------
 # 项目一地址,迈腾会采项目
-PROJECT_01_URL = 'https://maitenghuicai.com'
+URL_01 = 'https://maitenghuicai.com'
 
 # 项目二地址
 PROJECT_QQ_URL = ''

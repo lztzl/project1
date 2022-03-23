@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# @Time    : 2021/7/17 
-# @Author  : Mik
+# @Time : 2022/3/23
+# @Author : Mik
 
 import allure
 import pytest
 from utils.logs import logs
-from pom.common_login import CommonLogin
+from pom.login import Login
 from setting import DATA_ROOT_PATH
 from utils.reader import YamlReader
 import time
@@ -30,6 +30,6 @@ class TestLogin:
     @pytest.mark.parametrize("arg", user_info)
     @logs
     def test01_login(self, driver, arg):
-        page = CommonLogin(driver)
-        res = page.login_result(arg[0], arg[1])
+        page = Login(driver)
+        res = page.login(arg[0], arg[1])
         assert res == arg[2]

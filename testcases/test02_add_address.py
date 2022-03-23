@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# @Time    : 2021/10/22
-# @Author  : Mik
+# @Time : 2022/3/23
+# @Author : Mik
 
 import allure
-
 from setting import DATA_ROOT_PATH
 from utils.reader import YamlReader
 from utils.logs import logs
-from pom.change_user_address import ChangeUserAddress
+from pom.add_address_from_home import UserAddress
 import time
+from pom.common_login import common_login
 
 
 @allure.epic('Web测试')
@@ -26,7 +26,8 @@ class TestAddress:
     @allure.title('测试数据')
     @logs
     def test01_add_address(self, driver):
-        page = ChangeUserAddress(driver)
-        res = page.add_address_form_homopage(self.address_info[0], self.address_info[1], self.address_info[2],
-                                             self.address_info[3])
+        common_login(driver)
+        page = UserAddress(driver)
+        res = page.add_address(self.address_info[0], self.address_info[1], self.address_info[2],
+                               self.address_info[3])
         assert res == self.address_info[4]['expect']

@@ -1,14 +1,18 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# @Time    : 2021/7/17 
-# @Author  : Mik
+# @Time : 2022/3/23
+# @Author : Mik
 
-from page.loginpage import LoginPage
+from pom.login import Login
+from setting import DATA_ROOT_PATH
+from utils.logs import logger
+from utils.reader import YamlReader
 
 
-class CommonLogin:
-    def __init__(self, driver):
-        self.login_page_obj = LoginPage(driver)
+def common_login(driver):
+    data_path = DATA_ROOT_PATH + 'login_data.yaml'
+    user_info = YamlReader(data_path).data[0]
+    res = Login(driver).login(user_info[0], user_info[1])
+    logger.info(res)
 
-    def login_result(self, user, passwd):
-        return self.login_page_obj.login(user, passwd)
+
