@@ -9,7 +9,7 @@ from utils.reader import YamlReader
 from utils.logs import logs
 from pom.add_address_from_home import UserAddress
 import time
-from pom.common_login import common_login
+
 
 
 @allure.epic('Web测试')
@@ -25,9 +25,9 @@ class TestAddress:
     @allure.story('正常修改地址')
     @allure.title('测试数据')
     @logs
-    def test01_add_address(self, driver):
-        common_login(driver)
-        page = UserAddress(driver)
+    def test01_add_address(self, common_login):
+        # common_login(driver)
+        page = UserAddress(common_login)
         res = page.add_address(self.address_info[0], self.address_info[1], self.address_info[2],
                                self.address_info[3])
         assert res == self.address_info[4]['expect']
