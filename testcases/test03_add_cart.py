@@ -4,7 +4,6 @@
 # @Author : Mik
 
 import allure
-
 from utils.logs import logs
 from pom.add_cart_from_home import AddCart
 import time

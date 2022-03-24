@@ -1,5 +1,4 @@
 */__pycache__
-/venv
 /.pytest_cache/
 !/allure_report/.gitkeep
 !/allure_results/.gitkepp
