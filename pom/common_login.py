@@ -13,6 +13,7 @@ def common_login(driver):
     data_path = DATA_ROOT_PATH + 'login_data.yaml'
     user_info = YamlReader(data_path).data[0]
     res = Login(driver).login(user_info[0], user_info[1])
+
     logger.info(res)
 
 

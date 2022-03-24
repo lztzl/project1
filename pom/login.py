@@ -3,7 +3,7 @@
 # @Time : 2022/3/23
 # @Author : Mik
 # @File : login.py
-
+import time
 
 from selenium.webdriver.common.by import By
 from setting import URL_01
@@ -26,4 +26,5 @@ class Login(BasePage):
         self.send_keys(LoginResources.LOC_用户名框, user)
         self.send_keys(LoginResources.LOC_密码框, passwd)
         self.submit(LoginResources.LOC_用户名框)
+        self.sleep(0.5)
         return self.get_text(LoginResources.LOC_登陆结果)

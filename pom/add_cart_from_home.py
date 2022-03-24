@@ -23,6 +23,8 @@ class AddCartResources(Enum):
 class AddCart(BasePage):
 
     def add_cart(self):
+        self.get(AddCartResources.URL_search.value)
+        self.click(AddCartResources.LOC_搜索框)
         self.send_keys(AddCartResources.LOC_搜索框, '鞋')
         self.click(AddCartResources.LOC_搜索按钮)
         hand = self.get_handles()
