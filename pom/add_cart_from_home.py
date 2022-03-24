@@ -29,6 +29,7 @@ class AddCart(BasePage):
         self.click(AddCartResources.LOC_物品品框)
         self.switch_window(hand)
         self.click(AddCartResources.LOC_商品型号)
+        self.sleep(1)
         self.click(AddCartResources.LOC_加入购物车)
         res = self.get_text(AddCartResources.LOC_添加结果)
         return res
