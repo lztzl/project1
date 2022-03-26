@@ -58,7 +58,7 @@ TIMEOUT = 10
 # GRID_MARK = False
 
 # grid启动url
-COMMAND_REMOTE_EXECUTOR = 'http://101.132.254.22:4444/wd/hub'
+COMMAND_REMOTE_EXECUTOR = 'http://81.68.118.175:4444/wd/hub'
 
 FIREFOX_SERVICE_LOG_PATH = LOG_PATH+"server.log"
 
