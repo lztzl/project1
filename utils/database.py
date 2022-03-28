@@ -22,6 +22,7 @@ class MysqlClient:
         :param sql:
         :return:
         """
+        self.db.ping()
         cur = self.db.cursor()  # 获取游标
         sql = sql.lower()
         cur.execute(sql)
@@ -34,7 +35,7 @@ class MysqlClient:
         :param sql:
         :return:
         """
-
+        self.db.ping()
         cur = self.db.cursor()  # 获取游标
         sql = sql.lower()
         try:
@@ -45,12 +46,9 @@ class MysqlClient:
             raise
         cur.close()
 
-
-# sql1 = "SELECT * FROM course;"
+# sql1 = "select * from Student RIGHT JOIN (select t1.SId, class1, class2 from (select SId, score as class1 from sc where sc.CId = '01') as t1, (select SId, score as class2 from sc where sc.CId = '02')as t2 where t1.SId = t2.SId AND t1.class1 > t2.class2) as r on Student.SId = r.SId;"
+#
 #
 # mysql = MysqlClient()
 # data = mysql.select(sql1)
 # print(data)
-# sql2 = "insert into Student values('08' , '孙唯一' , '2014-06-01' , '男');"
-# mysql.execute_sql(sql2)
-
