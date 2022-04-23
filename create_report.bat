@@ -1,1 +1,1 @@
-allure generate --clean ./report/tmp -o ./report/report
+allure generate --clean ./allure-results -o ./allure-report

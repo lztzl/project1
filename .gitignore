@@ -2,3 +2,6 @@
 /.pytest_cache/
 !/allure_report/.gitkeep
 !/allure_results/.gitkepp
+/venv
+/allure-report
+/allure-results
